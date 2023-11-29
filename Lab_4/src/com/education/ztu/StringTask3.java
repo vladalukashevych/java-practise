@@ -1,11 +1,15 @@
 package com.education.ztu;
 
+import java.text.NumberFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Formatter;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 public class StringTask3 {
-    public static void DoTask() {
+    public static void DoTask(Locale locale) {
+        ResourceBundle resourceBundle = ResourceBundle.getBundle("resources.data", locale);
         String[][] purchases = {
                 {"Джинси", "Жіночий одяг", "1500.78"},
                 {"Спідниця", "Жіночий одяг", "1000.56"},
@@ -24,23 +28,25 @@ public class StringTask3 {
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
         String dateTime = currentDateTime.format(dateTimeFormatter);
 
-        try (Formatter formatter = new Formatter()) {
-            formatter.format("Дата та час покупки: \t\t%s%n", dateTime);
-            formatter.format("======================================================\n");
-            formatter.format("%-4s %-15s %-20s %-10s%n", "№", "Товар", "Категорія", "Ціна");
-            formatter.format("======================================================\n");
+        Formatter formatter = new Formatter();
+        formatter.format(resourceBundle.getString("purchase.dateTime") + "\t\t\t\t\t\t\t\t\t\t\t\t\t" + dateTime);
+        formatter.format(resourceBundle.getString("purchase.separationLine"));
+        formatter.format(resourceBundle.getString("purchase.itemListHeader"));
+        formatter.format(resourceBundle.getString("purchase.separationLine"));
 
+        NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(locale);
+//        Currency currentCurrency = Currency.getInstance(locale);
             for (int i = 0; i < purchases.length; i++) {
                 formatter.format("%-4d %-15s %-20s %-10s ₴%n",
                         i + 1, purchases[i][0], purchases[i][1], purchases[i][2]);
             }
 
             double total = calculateTotal(purchases);
-            formatter.format("======================================================\n");
-            formatter.format("Разом: \t\t\t\t\t\t\t\t\t%.2f ₴%n", total);
+            formatter.format(resourceBundle.getString("purchase.separationLine"));
+            formatter.format(resourceBundle.getString("purchase.total"), total);
 
             System.out.println(formatter);
-        }
+
     }
 
     private static double calculateTotal(String[][] purchases) {
