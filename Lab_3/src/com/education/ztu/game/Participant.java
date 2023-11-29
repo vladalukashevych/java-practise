@@ -2,7 +2,7 @@ package com.education.ztu.game;
 
 import java.util.Objects;
 
-public abstract class Participant implements Cloneable {
+public abstract class Participant implements Cloneable, Comparable<Participant> {
     private String name;
     private int age;
 
@@ -51,5 +51,9 @@ public abstract class Participant implements Cloneable {
                 "name='" + name + '\'' +
                 ", age=" + age +
                 '}';
+    }
+
+    public int compareTo(Participant p) {
+        return name.compareTo(p.getName());
     }
 }
