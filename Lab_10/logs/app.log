@@ -1,0 +1,50 @@
+12:25:53.715 [main] TRACE com.education.ztu.App - This is a trace message
+12:25:53.718 [main] DEBUG com.education.ztu.App - This is a debug message
+12:25:53.718 [main] INFO  com.education.ztu.App - This is an info message
+12:25:53.719 [main] WARN  com.education.ztu.App - This is a warning message
+12:25:53.719 [main] ERROR com.education.ztu.App - This is an error message
+12:34:08.263 [main] INFO  com.education.ztu.game.Team - To the team Dragon was added participant Ivan
+12:34:08.312 [main] INFO  com.education.ztu.game.Team - To the team Dragon was added participant Mariya
+12:34:08.313 [main] INFO  com.education.ztu.game.Team - To the team Vpered was added participant Mykola
+12:34:08.313 [main] INFO  com.education.ztu.game.Team - To the team Vpered was added participant Viktoria
+12:34:08.314 [main] INFO  com.education.ztu.game.Team - To the team Robotyagi was added participant Andriy
+12:34:08.314 [main] INFO  com.education.ztu.game.Team - To the team Robotyagi was added participant Oksana
+12:34:08.314 [main] INFO  com.education.ztu.game.Team - To the team Fantaziya was added participant Sergey
+12:34:08.314 [main] INFO  com.education.ztu.game.Team - To the team Fantaziya was added participant Olga
+12:34:08.314 [main] INFO  com.education.ztu.game.Team - The team Dragon is the winner!
+12:36:38.614 [main] INFO  com.education.ztu.game.Team - To the team Dragon was added participant Ivan
+12:36:38.617 [main] INFO  com.education.ztu.game.Team - To the team Dragon was added participant Mariya
+12:36:38.617 [main] INFO  com.education.ztu.game.Team - To the team Vpered was added participant Mykola
+12:36:38.617 [main] INFO  com.education.ztu.game.Team - To the team Vpered was added participant Viktoria
+12:36:38.617 [main] INFO  com.education.ztu.game.Team - To the team Robotyagi was added participant Andriy
+12:36:38.617 [main] INFO  com.education.ztu.game.Team - To the team Robotyagi was added participant Oksana
+12:36:38.618 [main] INFO  com.education.ztu.game.Team - To the team Fantaziya was added participant Sergey
+12:36:38.618 [main] INFO  com.education.ztu.game.Team - To the team Fantaziya was added participant Olga
+12:36:38.618 [main] INFO  com.education.ztu.game.Team - The team Dragon is the winner!
+12:40:28.316 [main] INFO  com.education.ztu.game.Team - To the team Dragon was added participant Ivan
+12:40:28.328 [main] INFO  com.education.ztu.game.Team - To the team Dragon was added participant Mariya
+12:40:28.328 [main] INFO  com.education.ztu.game.Team - To the team Vpered was added participant Mykola
+12:40:28.329 [main] INFO  com.education.ztu.game.Team - To the team Vpered was added participant Viktoria
+12:40:28.329 [main] INFO  com.education.ztu.game.Team - To the team Robotyagi was added participant Andriy
+12:40:28.329 [main] INFO  com.education.ztu.game.Team - To the team Robotyagi was added participant Oksana
+12:40:28.329 [main] INFO  com.education.ztu.game.Team - To the team Fantaziya was added participant Sergey
+12:40:28.330 [main] INFO  com.education.ztu.game.Team - To the team Fantaziya was added participant Olga
+12:40:28.330 [main] INFO  com.education.ztu.game.Team - The team Fantaziya is the winner!
+12:42:01.385 [main] INFO  com.education.ztu.game.Team - To the team Dragon was added participant Ivan
+12:42:01.390 [main] INFO  com.education.ztu.game.Team - To the team Dragon was added participant Mariya
+12:42:01.390 [main] INFO  com.education.ztu.game.Team - To the team Vpered was added participant Mykola
+12:42:01.390 [main] INFO  com.education.ztu.game.Team - To the team Vpered was added participant Viktoria
+12:42:01.390 [main] INFO  com.education.ztu.game.Team - To the team Robotyagi was added participant Andriy
+12:42:01.390 [main] INFO  com.education.ztu.game.Team - To the team Robotyagi was added participant Oksana
+12:42:01.391 [main] INFO  com.education.ztu.game.Team - To the team Fantaziya was added participant Sergey
+12:42:01.391 [main] INFO  com.education.ztu.game.Team - To the team Fantaziya was added participant Olga
+12:42:01.391 [main] INFO  com.education.ztu.game.Team - The team Fantaziya is the winner!
+14:08:28.855 [main] INFO  com.education.ztu.game.Team - To the team Dragon was added participant Ivan
+14:08:28.862 [main] INFO  com.education.ztu.game.Team - To the team Dragon was added participant Mariya
+14:08:28.863 [main] INFO  com.education.ztu.game.Team - To the team Vpered was added participant Mykola
+14:08:28.864 [main] INFO  com.education.ztu.game.Team - To the team Vpered was added participant Viktoria
+14:08:28.864 [main] INFO  com.education.ztu.game.Team - To the team Robotyagi was added participant Andriy
+14:08:28.864 [main] INFO  com.education.ztu.game.Team - To the team Robotyagi was added participant Oksana
+14:08:28.864 [main] INFO  com.education.ztu.game.Team - To the team Fantaziya was added participant Sergey
+14:08:28.864 [main] INFO  com.education.ztu.game.Team - To the team Fantaziya was added participant Olga
+14:08:28.864 [main] INFO  com.education.ztu.game.Team - The team Dragon is the winner!
