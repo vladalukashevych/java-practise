@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.education.ztu"},{"l":"com.education.ztu.game"},{"l":"com.education.ztu.game.ParticipantCompatators"}];updateSearchResults();
