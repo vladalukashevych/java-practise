@@ -51,7 +51,7 @@ public class Task3 {
 
             double total = calculateTotal(purchases);
             formatter.format("======================================================\n");
-            formatter.format("Разом: \t\t\t\t\t\t\t\t\t%.2f ₴%n", total);
+            formatter.format("Разом:%43.2f    ₴", total);
 
 //            System.out.println(formatter);
 
