@@ -1,15 +1,17 @@
 package com.education.ztu;
 
-class MyRunnable4 implements Runnable {
+class  MyRunnable4 implements Runnable {
     private static int result = 0;
 
-    private synchronized void updateResult() {
-        System.out.print(result + " ");
-        result++;
-        try {
-            Thread.sleep(200);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+    private void updateResult() {
+        synchronized (this) {
+            System.out.print(result + " ");
+            result++;
+            try {
+                Thread.sleep(200);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 
