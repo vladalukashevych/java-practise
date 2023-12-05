@@ -12,6 +12,7 @@ public class Task3 {
         MTask2();
         MTask3();
         MTask4();
+        MTask5();
     }
 
     private static void MTask1() {
