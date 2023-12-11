@@ -1,9 +1,6 @@
 package com.education.ztu;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -27,6 +24,11 @@ public class Query {
     public List<Product> SelectAllByBrand(String brand) {
         String query = "SELECT * FROM products WHERE brand = '" + brand + "'";
         return executeSelectQuery(query);
+    }
+
+    public Product SelectById(int id) {
+        String query = "SELECT * FROM products WHERE id = '" + id + "'";
+        return executeSelectQuery(query).getFirst();
     }
 
     private List<Product> executeSelectQuery(String query) {
@@ -60,7 +62,7 @@ public class Query {
         try {
             Statement statement = connection.createStatement();
 
-            String query = "DELETE FROM products";
+            String query = "DELETE * FROM products";
             int rowsAffected = statement.executeUpdate(query);
 
             System.out.println("Rows affected: " + rowsAffected);
@@ -68,6 +70,50 @@ public class Query {
             statement.close();
         } catch (SQLException e) {
             e.printStackTrace();
+        }
+    }
+
+    private void executeAddQuery(String query) throws SQLException {
+        Statement statement = connection.createStatement();
+
+        int rowsAffected = statement.executeUpdate(query, Statement.RETURN_GENERATED_KEYS);
+        ResultSet resultSet = statement.getGeneratedKeys();
+        int generatedKey = 0;
+        if (resultSet.next()) {
+            generatedKey = resultSet.getInt(1);
+        }
+
+        Product addedProduct = SelectById(generatedKey);
+        System.out.println("Rows affected: " + rowsAffected);
+        System.out.println(addedProduct.toString());
+
+        statement.close();
+    }
+
+    public void AddProduct(Product product) {
+        try {
+
+            String query = String.format("INSERT INTO products (name, count, category, brand) " +
+                            "VALUES (\"%s\", %d, \"%s\", \"%s\")",
+                    product.getName(), product.getCount(), product.getCategory(), product.getBrand());
+
+            executeAddQuery(query);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void AddProductSyntaxError(Product product) {
+        try {
+            String query = String.format("INSERT INTO product (name, count, category, brand) " +
+                            "VALUES (\"%s\", %d, \"%s\", \"%s\")",
+                    product.getName(), product.getCount(), product.getCategory(), product.getBrand());
+
+            executeAddQuery(query);
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
         }
     }
 }

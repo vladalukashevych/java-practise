@@ -18,6 +18,13 @@ public class Product {
         this.brand = brand;
     }
 
+    public Product(String name, int count, String category, String brand) {
+        this.name = name;
+        this.count = count;
+        this.category = category;
+        this.brand = brand;
+    }
+
     public int getId() {
         return id;
     }
