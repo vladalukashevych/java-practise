@@ -1,0 +1,57 @@
+plugins {
+    id 'java'
+    id 'checkstyle'
+    id 'jacoco'
+    id 'pmd'
+}
+
+checkstyle {
+    toolVersion '8.29'
+    configFile file("config/checkstyle/checkstyle.xml")
+}
+checkstyleMain {
+    source ='src/main/java'
+}
+checkstyleTest {
+    source ='src/test/java'
+}
+
+pmd {
+    consoleOutput = false
+    toolVersion = "6.21.0"
+    ignoreFailures = false
+    ruleSetFiles = files("config/pmd/pmd-ruleset.xml")
+}
+
+jacoco {
+    toolVersion = "0.8.9"
+    reportsDirectory = layout.buildDirectory.dir('reports/jacocoReport')
+}
+
+group = 'com.education.ztu'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation('junit:junit:4.12')
+    testImplementation group: 'org.testng', name: 'testng', version: '6.14.3'
+    implementation 'checkstyle:checkstyle:5.0'
+    implementation 'jp.skypencil:PMD-tools-for-SLF4J:0.4'
+    testImplementation 'org.sonarsource.jacoco:sonar-jacoco-plugin:1.2.0.1505'
+
+}
+
+test {
+    useJUnitPlatform()
+}
+
+tasks.register('ciao') {
+    doLast {
+        println "Ciao, mi amore!"
+    }
+}
